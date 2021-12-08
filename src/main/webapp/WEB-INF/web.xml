@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ControlarInformacion</servlet-name>
+        <servlet-class>ipn.escom.controlador.ControlarInformacion</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EnviarCorreo</servlet-name>
+        <servlet-class>ipn.escom.servlet.EnviarCorreo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControlarInformacion</servlet-name>
+        <url-pattern>/ControlarInformacion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EnviarCorreo</servlet-name>
+        <url-pattern>/EnviarCorreo</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
